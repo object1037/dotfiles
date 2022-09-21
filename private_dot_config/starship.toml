@@ -1,0 +1,31 @@
+format = """
+$username\
+$hostname\
+[ $directory [](#64748B)](bg:#64748B)[$git_branch$git_status](bold)[[](fg:#263238 bg:#4e5166)$cmd_duration$character[](fg:#4e5166)](bg:#4e5166) """
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style)"
+style = "bold bg:#64748B"
+read_only = " "
+read_only_style = "yellow bg:#64748B"
+
+[git_branch]
+symbol = " "
+format = " [\\[$symbol$branch\\]]($style) "
+
+[cmd_duration]
+format = " [$duration]($style)"
+style = "fg:#94a3b8 bg:#4e5166"
+
+[character]
+success_symbol = ""
+error_symbol = "[ !](bold fg:red bg:#4e5166)"
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[gcloud]
+disabled = true
