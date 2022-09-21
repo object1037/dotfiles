@@ -1,0 +1,17 @@
+[user]
+	name = object1037
+	email = contact@object1037.dev
+[color]
+	ui = auto
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[core]
+	ignorecase = false
+	editor = nvim
+[diff]
+	algorithm = histogram
+	tool = nvimdiff
+[difftool]
+	prompt = false
