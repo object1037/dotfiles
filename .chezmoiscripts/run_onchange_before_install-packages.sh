@@ -1,3 +1,8 @@
+#!/bin/bash
+
+set -eu
+
+brew bundle --no-lock --file=/dev/stdin <<EOF
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -27,3 +32,5 @@ cask "visual-studio-code"
 cask "hyper"
 cask "raycast"
 cask "fig"
+
+EOF
