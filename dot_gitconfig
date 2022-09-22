@@ -15,3 +15,5 @@
 	tool = nvimdiff
 [difftool]
 	prompt = false
+[commit]
+	verbose = true
