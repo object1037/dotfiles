@@ -21,7 +21,7 @@ module.exports = {
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'bold',
 
-    lineHeight: 1.1,
+    lineHeight: 1,
     
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: '#fd2e7a',
