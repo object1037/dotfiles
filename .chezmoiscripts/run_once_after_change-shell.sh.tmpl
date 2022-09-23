@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -eu
+
+{{ if eq .chezmoi.arch "arm64" -}}
+FISH_PATH=/opt/homebrew/bin/fish
+{{ else -}}
+FISH_PATH=/usr/local/bin/fish
+{{ end }}
+
+if [[ $SHELL = $FISH_PATH ]]; then
+  echo "fish already set."
+elif cat /etc/shells | grep -q $FISH_PATH; then
+  echo "chsh -s ${FISH_PATH}"r
+else
+  echo "echo ${FISH_PATH} | sudo tee -a /etc/shells"
+  echo "chsh -s ${FISH_PATH}"
+fi
