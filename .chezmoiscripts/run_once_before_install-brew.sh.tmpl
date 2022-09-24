@@ -9,10 +9,10 @@ else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   {{ if eq .chezmoi.arch "arm64" -}}
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bashrc
   eval "$(/opt/homebrew/bin/brew shellenv)"
   {{ else -}}
-  echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.bash_profile
+  echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.bashrc
   eval "$(/usr/local/bin/brew shellenv)"
   {{ end }}
 fi
