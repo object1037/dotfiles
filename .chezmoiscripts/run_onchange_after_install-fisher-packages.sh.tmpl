@@ -4,4 +4,5 @@
 #!/usr/local/bin/fish
 {{ end }}
 # fish_plugins hash: {{ include "private_dot_config/private_fish/fish_plugins" | sha256sum }}
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher update
