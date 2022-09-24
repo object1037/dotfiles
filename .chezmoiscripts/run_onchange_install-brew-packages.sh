@@ -31,5 +31,6 @@ cask "visual-studio-code"
 cask "hyper"
 cask "raycast"
 cask "fig"
+cask "monitorcontrol"
 
 EOF
