@@ -33,6 +33,7 @@ cask "hyper"
 cask "raycast"
 cask "fig"
 cask "monitorcontrol"
+cask "zoom"
 mas "GoodNotes", id: 1444383602
 mas "LINE", id: 539883307
 mas "Slack", id: 803453959
