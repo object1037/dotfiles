@@ -51,6 +51,8 @@ end
 
 starship init fish | source
 
+zoxide init fish | source
+
 # pnpm
 set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
 fish_add_path "$PNPM_HOME"
