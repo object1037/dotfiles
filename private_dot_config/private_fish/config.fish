@@ -60,3 +60,6 @@ fish_add_path "$PNPM_HOME"
 # tabtab source for packages
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
+
+# opam configuration
+source /Users/object1037/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
