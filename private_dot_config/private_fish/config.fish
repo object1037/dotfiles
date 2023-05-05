@@ -63,3 +63,6 @@ fish_add_path "$PNPM_HOME"
 
 # opam configuration
 source /Users/object1037/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+set -gx RUNEWIDTH_EASTASIAN 0
+set -gx FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --style=numbers --line-range=:500 {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'" 
