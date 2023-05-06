@@ -1,13 +1,27 @@
 format = """
 $username\
 $hostname\
-[ $directory [](#64748B)](bg:#64748B)[$git_branch$git_status](bold)[[](fg:#263238 bg:#4e5166)$cmd_duration$character[](fg:#4e5166)](bg:#4e5166) """
+[ $directory [](#64748B)](bg:#64748B)\
+[$git_branch$git_status](bold)\
+[[](fg:#263238 bg:#4e5166)$cmd_duration$character[](fg:#4e5166)](bg:#4e5166) \
+"""
+
+[username]
+style_user = "bg:#769ff0"
+style_root = "bg:#fd2e7a"
+format = '[ $user ]($style)'
+
+[hostname]
+ssh_symbol = '🌐'
+format = '[ [$ssh_symbol](bold fg:blue $style)$hostname ]($style)'
+style = 'bg:#4e5166'
 
 [directory]
 format = "[$path]($style)[$read_only]($read_only_style)"
 style = "bold bg:#64748B"
 read_only = " "
 read_only_style = "yellow bg:#64748B"
+truncation_symbol = "…/"
 
 [git_branch]
 symbol = " "
