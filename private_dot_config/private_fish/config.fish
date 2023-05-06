@@ -65,4 +65,13 @@ fish_add_path "$PNPM_HOME"
 source /Users/object1037/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 set -gx RUNEWIDTH_EASTASIAN 0
-set -gx FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --style=numbers --line-range=:500 {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'" 
+set -gx FZF_CTRL_T_OPTS "
+    --preview 'bat -n --color=always --style=numbers --line-range=:500 {}'
+    --bind 'ctrl-/:change-preview-window(down|hidden|)'" 
+set -gx FZF_CTRL_R_OPTS "
+    --preview 'echo {}' --preview-window up:3:hidden:wrap
+    --bind 'ctrl-/:toggle-preview'
+    --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+    --color header:italic
+    --header 'Press CTRL-Y to copy command into clipboard'"
+set -gx FZF_ALT_C_OPTS "--preview 'ls -T --icons {}'"
