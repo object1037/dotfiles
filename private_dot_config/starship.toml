@@ -2,7 +2,7 @@ format = """
 $username\
 $hostname\
 [ $directory [](#64748B)](bg:#64748B)\
-[$git_branch$git_status](bold)\
+[$git_branch$git_status$git_state](bold)\
 [[](fg:#263238 bg:#4e5166)$cmd_duration$character[](fg:#4e5166)](bg:#4e5166) \
 """
 
