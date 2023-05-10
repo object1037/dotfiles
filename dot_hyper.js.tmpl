@@ -36,7 +36,7 @@ module.exports = {
     cursorBlink: false,
 
     // color of the text
-    foregroundColor: '#fff',
+    foregroundColor: '#ECEFF1',
 
     // terminal background color
     // opacity is only supported on macOS
@@ -48,10 +48,34 @@ module.exports = {
     selectionColor: 'rgb(252, 28, 125, 0.3)',
 
     // border color (window, tabs)
-    borderColor: '#fff',
+    borderColor: '#222d32',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: `
+      .hyper_main {
+        border: none !important;
+      }
+      .header_header {
+        background: #222d32 !important;
+      }
+      .tab_tab {
+        border: 0;
+      }
+      .tab_textActive {
+        border-bottom: 2px solid #fd2e7a;
+      }
+      .splitpane_divider {
+        background-color: rgba(170, 187, 195, 0.16) !important;
+      }
+      .term_term {
+        opacity: 0.5;
+        transition: opacity 0.15s ease-in-out;
+        will-change: opacity;
+      }
+      .term_active .term_term {
+        opacity: 1;
+      }
+    `,
 
     // custom CSS to embed in the terminal window
     termCSS: '',
@@ -71,7 +95,24 @@ module.exports = {
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
     // an array here instead of a color map object
-    colors: {},
+    colors: {
+      white: '#ffffff',
+      black: '#000000',
+      red: '#FF5252',
+      yellow: '#ffd36b',
+      green: '#9ccc65',
+      cyan: '#89DDFF',
+      blue: '#82aaff',
+      magenta: '#C792EA',
+      lightBlack: '#434758',
+      lightRed: '#fc625d',
+      lightGreen: '#9ccc65',
+      lightYellow: '#ffd36b',
+      lightBlue: '#82aaff',
+      lightMagenta: '#b38bfc',
+      lightCyan: '#68b6f3',
+      lightWhite: '#ffffff'
+    },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
