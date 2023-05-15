@@ -19,7 +19,7 @@ style = 'bg:#4e5166'
 [directory]
 format = "[$path]($style)[$read_only]($read_only_style)"
 style = "bold bg:#64748B"
-read_only = " "
+read_only = " "
 read_only_style = "yellow bg:#64748B"
 truncation_symbol = "…/"
 
