@@ -35,6 +35,7 @@ set -gx EDITOR 'code -w'
 
 # PATH
 fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/sbin
 fish_add_path $HOME/bin
 #set -x PATH $HOME/.local/bin $PATH
 #set -x PATH $HOME/.nodebrew/current/bin $PATH
