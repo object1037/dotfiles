@@ -76,3 +76,5 @@ set -gx FZF_CTRL_R_OPTS "
     --color header:italic
     --header 'Press CTRL-Y to copy command into clipboard'"
 set -gx FZF_ALT_C_OPTS "--preview 'ls -T --icons {}'"
+
+pyenv init - | source
