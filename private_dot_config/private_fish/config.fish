@@ -31,6 +31,10 @@ set fish_color_autosuggestion "#94A3B8"
 
 set fish_greeting "Happy Hacking!"
 
+set -g FISH_CONFIG_DIR $HOME/.config/fish
+set -g FISH_CONFIG $FISH_CONFIG_DIR/config.fish
+set -g FISH_CACHE_DIR $HOME/.cache/fish
+
 set -gx EDITOR 'code -w'
 
 # PATH
@@ -50,10 +54,6 @@ function fish_title
     pwd
 end
 
-starship init fish | source
-
-zoxide init fish | source
-
 # pnpm
 set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
 fish_add_path "$PNPM_HOME"
@@ -65,6 +65,7 @@ fish_add_path "$PNPM_HOME"
 # opam configuration
 source /Users/object1037/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
+# fzf configuration
 set -gx RUNEWIDTH_EASTASIAN 0
 set -gx FZF_CTRL_T_OPTS "
     --preview 'bat -n --color=always --style=numbers --line-range=:500 {}'
@@ -77,4 +78,14 @@ set -gx FZF_CTRL_R_OPTS "
     --header 'Press CTRL-Y to copy command into clipboard'"
 set -gx FZF_ALT_C_OPTS "--preview 'ls -T --icons {}'"
 
-pyenv init - | source
+# external command caching
+set -l CONFIG_CACHE $FISH_CACHE_DIR/config.fish
+if test "$FISH_CONFIG" -nt "$CONFIG_CACHE"
+    mkdir -p $FISH_CACHE_DIR
+    echo "" > $CONFIG_CACHE
+
+    zoxide init fish >> $CONFIG_CACHE
+    pyenv init - >> $CONFIG_CACHE
+    starship init fish >> $CONFIG_CACHE
+end
+source $CONFIG_CACHE
