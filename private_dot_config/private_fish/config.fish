@@ -54,6 +54,8 @@ function fish_title
     pwd
 end
 
+set -gx GPG_TTY (tty)
+
 # pnpm
 set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
 fish_add_path "$PNPM_HOME"
@@ -89,3 +91,7 @@ if test "$FISH_CONFIG" -nt "$CONFIG_CACHE"
     starship init fish >> $CONFIG_CACHE
 end
 source $CONFIG_CACHE
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
