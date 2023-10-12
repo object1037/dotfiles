@@ -30,3 +30,4 @@
 	prompt = false
 [commit]
 	verbose = true
+	gpgsign = true
