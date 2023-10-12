@@ -1,6 +1,7 @@
 [user]
 	name = object1037
 	email = contact@object1037.dev
+	signingkey = DD9CA8341859EACC
 [color]
 	ui = auto
 [pull]
