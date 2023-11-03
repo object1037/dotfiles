@@ -2,8 +2,8 @@ alias ls 'eza'
 alias nvimdiff 'nvim -d'
 
 abbr -a la ls -a
-abbr -a ll ls -l --git -h --icons
-abbr -a lla ls -l --git -h --icons -a
+abbr -a ll ls -l --git -h --icons --no-user --time-style=iso
+abbr -a lla ls -l --git -h --icons --no-user --time-style=iso -a
 abbr -a lst ls -T --icons
 
 abbr pn pnpm
