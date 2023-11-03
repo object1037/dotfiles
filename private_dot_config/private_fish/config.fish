@@ -1,4 +1,4 @@
-alias ls 'exa'
+alias ls 'eza'
 alias nvimdiff 'nvim -d'
 
 abbr -a la ls -a
