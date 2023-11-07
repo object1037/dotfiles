@@ -31,10 +31,6 @@ set fish_color_autosuggestion "#94A3B8"
 
 set fish_greeting "Happy Hacking!"
 
-set -g FISH_CONFIG_DIR $HOME/.config/fish
-set -g FISH_CONFIG $FISH_CONFIG_DIR/config.fish
-set -g FISH_CACHE_DIR $HOME/.cache/fish
-
 set -gx EDITOR 'code -w'
 
 # PATH
@@ -55,6 +51,12 @@ function fish_title
 end
 
 set -gx GPG_TTY (tty)
+
+starship init fish | source
+
+zoxide init fish | source
+
+pyenv init - | source
 
 # pnpm
 set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
@@ -79,18 +81,6 @@ set -gx FZF_CTRL_R_OPTS "
     --color header:italic
     --header 'Press CTRL-Y to copy command into clipboard'"
 set -gx FZF_ALT_C_OPTS "--preview 'ls -T --icons {}'"
-
-# external command caching
-set -l CONFIG_CACHE $FISH_CACHE_DIR/config.fish
-if test "$FISH_CONFIG" -nt "$CONFIG_CACHE"
-    mkdir -p $FISH_CACHE_DIR
-    echo "" > $CONFIG_CACHE
-
-    zoxide init fish >> $CONFIG_CACHE
-    pyenv init - >> $CONFIG_CACHE
-    starship init fish >> $CONFIG_CACHE
-end
-source $CONFIG_CACHE
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
