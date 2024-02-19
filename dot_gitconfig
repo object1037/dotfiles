@@ -4,6 +4,8 @@
 	signingkey = 3D9005AF13FB8FC6
 [color]
 	ui = auto
+[branch]
+	sort = -committerdate
 [pull]
 	ff = only
 [init]
