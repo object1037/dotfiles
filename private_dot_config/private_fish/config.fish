@@ -58,13 +58,28 @@ zoxide init fish | source
 
 pyenv init - | source
 
-# pnpm
-set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
-fish_add_path "$PNPM_HOME"
-# pnpm end
-# tabtab source for packages
-# uninstall by removing these lines
-[ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
+###-begin-pnpm-completion-###
+function _pnpm_completion
+  set cmd (commandline -o)
+  set cursor (commandline -C)
+  set words (count $cmd)
+
+  set completions (eval env DEBUG=\"" \"" COMP_CWORD=\""$words\"" COMP_LINE=\""$cmd \"" COMP_POINT=\""$cursor\"" SHELL=fish pnpm completion-server -- $cmd)
+
+  if [ "$completions" = "__tabtab_complete_files__" ]
+    set -l matches (commandline -ct)*
+    if [ -n "$matches" ]
+      __fish_complete_path (commandline -ct)
+    end
+  else
+    for completion in $completions
+      echo -e $completion
+    end
+  end
+end
+
+complete -f -d 'pnpm' -c pnpm -a "(_pnpm_completion)"
+###-end-pnpm-completion-###
 
 # opam configuration
 source /Users/object1037/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
