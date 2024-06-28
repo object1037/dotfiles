@@ -4,9 +4,6 @@ set -eu
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
 brew "bat"
 brew "eza"
 brew "git-delta"
@@ -42,7 +39,6 @@ cask "raycast"
 cask "fig"
 cask "monitorcontrol"
 cask "zoom"
-mas "GoodNotes", id: 1444383602
 mas "LINE", id: 539883307
 mas "Slack", id: 803453959
 

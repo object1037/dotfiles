@@ -2,4 +2,4 @@
 
 set -eu
 
-open ~/raycast.rayconfig
+open ~/.config/raycast.rayconfig
