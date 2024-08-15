@@ -36,7 +36,6 @@ cask "google-japanese-ime"
 cask "visual-studio-code"
 cask "hyper"
 cask "raycast"
-cask "fig"
 cask "monitorcontrol"
 cask "zoom"
 mas "LINE", id: 539883307
