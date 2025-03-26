@@ -100,3 +100,7 @@ set -gx FZF_ALT_C_OPTS "--preview 'ls -T --icons {}'"
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/object1037/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
