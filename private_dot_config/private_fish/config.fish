@@ -17,6 +17,9 @@ abbr glog git log --oneline
 
 alias gl 'git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(black magenta)%d%Creset %s"'
 
+abbr -a --position anywhere -- --help '--help | bat -plhelp'
+abbr -a --position anywhere -- -h '-h | bat -plhelp'
+
 set fish_color_command brwhite --bold
 set fish_color_keyword "#F0ABFC"
 set fish_color_quote "#86EFAC"
