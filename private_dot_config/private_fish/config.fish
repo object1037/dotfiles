@@ -63,6 +63,8 @@ zoxide init fish | source
 
 pyenv init - | source
 
+set -U nvm_default_version latest
+
 ###-begin-pnpm-completion-###
 function _pnpm_completion
   set cmd (commandline -o)
