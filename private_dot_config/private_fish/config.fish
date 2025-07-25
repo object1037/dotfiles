@@ -20,6 +20,8 @@ alias gl 'git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yell
 abbr -a --position anywhere -- --help '--help | bat -plhelp'
 abbr -a --position anywhere -- -h '-h | bat -plhelp'
 
+set -gx MANPAGER "sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+
 set fish_color_command brwhite --bold
 set fish_color_keyword "#F0ABFC"
 set fish_color_quote "#86EFAC"
