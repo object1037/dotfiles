@@ -1,14 +1,5 @@
 # This is the configuration file for Ghostty.
 #
-# This template file has been automatically created at the following
-# path since Ghostty couldn't find any existing config files on your system:
-#
-#   /Users/object1037/Library/Application Support/com.mitchellh.ghostty/config
-#
-# The template does not set any default options, since Ghostty ships
-# with sensible defaults for all options. Users should only need to set
-# options that they want to change from the default.
-#
 # Run `ghostty +show-config --default --docs` to view a list of
 # all available config options and their default values.
 #
@@ -44,15 +35,20 @@
 
 cursor-style = block
 cursor-style-blink = false
+shell-integration-features = no-cursor
+
 window-padding-x = 16
 window-padding-y = 16
 window-width = 120
 window-height = 40
+
 macos-icon = xray
 background-opacity = 0.92
-shell-integration-features = no-cursor
-theme = onehalfdark
+
+theme = myTheme
 window-colorspace = display-p3
 font-family = "JetBrainsMono Nerd Font Mono"
 font-family = "HackGen"
+
 keybind = global:cmd+three=toggle_quick_terminal
+macos-option-as-alt = true
