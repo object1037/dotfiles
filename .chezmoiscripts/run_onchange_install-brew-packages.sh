@@ -2,8 +2,7 @@
 
 set -eu
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
-tap "homebrew/bundle"
+brew bundle --file=/dev/stdin <<EOF
 brew "bat"
 brew "eza"
 brew "git-delta"
@@ -16,7 +15,6 @@ brew "gnupg"
 brew "grep"
 brew "htmlq"
 brew "jq"
-brew "node"
 brew "starship"
 brew "topgrade"
 brew "yarn"
