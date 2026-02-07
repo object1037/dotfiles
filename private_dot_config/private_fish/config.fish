@@ -65,6 +65,8 @@ pyenv init - | source
 
 set -U nvm_default_version latest
 
+set -gx HOMEBREW_FORBIDDEN_FORMULAE "node"
+
 ###-begin-pnpm-completion-###
 function _pnpm_completion
   set cmd (commandline -o)
@@ -111,3 +113,10 @@ set --export PATH $BUN_INSTALL/bin $PATH
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 set --export --prepend PATH "/Users/object1037/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# pnpm
+set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
