@@ -12,7 +12,7 @@
 	defaultBranch = main
 [core]
 	ignorecase = false
-	editor = nvim
+	editor = hx
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only
@@ -27,10 +27,7 @@
 	conflictstyle = diff3
 [diff]
 	algorithm = histogram
-	tool = nvimdiff
 	colorMoved = default
-[difftool]
-	prompt = false
 [commit]
 	verbose = true
 	gpgsign = true

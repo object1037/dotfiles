@@ -1,0 +1,13 @@
+theme = "myTheme"
+
+[editor]
+bufferline = "always"
+color-modes = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.indent-guides]
+render = true

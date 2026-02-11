@@ -1,5 +1,4 @@
 alias ls 'eza'
-alias nvimdiff 'nvim -d'
 
 abbr -a la ls -a
 abbr -a ll ls -l --git -h --icons --no-user --time-style=iso
@@ -36,7 +35,7 @@ set fish_color_autosuggestion "#94A3B8"
 
 set fish_greeting "Happy Hacking!"
 
-set -gx EDITOR 'code -w'
+set -gx EDITOR 'hx'
 
 # PATH
 fish_add_path /opt/homebrew/bin
