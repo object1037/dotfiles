@@ -2,28 +2,29 @@
 
 # Syntax Highlighting
 
-"type" = "purple"
+"type" = "yellow"
 
 "constructor" = "blue"
 
-"constant" = "yellow"
+"constant" = "orange"
+"constant.builtin" = "red"
 
 "string" = "green"
 "string.regexp" = "yellow"
 "string.special" = "blue"
 
-"comment" = { fg = "comment" }
+"comment" = { fg = "comment", modifiers = ["italic"] }
 
 "variable" = "text"
-"variable.parameter" = { fg = "orange" }
+# "variable.parameter" = { fg = "orange" }
 "variable.builtin" = "yellow"
 
 "label" = "orange"
 
 "punctuation" = "cyan"
 
-"keyword" = "purple"
-"keyword.storage" = "cyan"
+"keyword" = { fg = "cyan", modifiers = ["italic"] }
+"keyword.storage" = "purple"
 
 "operator" = "cyan"
 
