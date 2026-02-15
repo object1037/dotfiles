@@ -1,3 +1,9 @@
+# HTML
+[[language]]
+name = "html"
+language-servers = [{ name = "superhtml", except-features = ["format"] }, "vscode-html-language-server"]
+auto-format = true
+
 # Biome
 [language-server]
 biome = { command = "biome", args = ["lsp-proxy"] }
@@ -30,6 +36,10 @@ language-servers = [ { name = "typescript-language-server", except-features = [ 
 [[language]]
 name = "json"
 language-servers = [ { name = "vscode-json-language-server", except-features = [ "format" ] }, "biome" ]
+
+[[language]]
+name = "css"
+language-servers = [ { name = "vscode-css-language-server", except-features = [ "format" ] }, "biome" ]
 
 # Astro
 [language-server.astro-ls]
