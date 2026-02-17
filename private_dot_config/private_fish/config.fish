@@ -1,4 +1,4 @@
-alias ls 'eza'
+alias ls eza
 
 abbr -a la ls -a
 abbr -a ll ls -l --git -h --icons --no-user --time-style=iso
@@ -35,7 +35,7 @@ set fish_color_autosuggestion "#94A3B8"
 
 set fish_greeting "Happy Hacking!"
 
-set -gx EDITOR 'hx'
+set -gx EDITOR hx
 
 # PATH
 fish_add_path /opt/homebrew/bin
@@ -64,39 +64,36 @@ pyenv init - | source
 
 set -U nvm_default_version latest
 
-set -gx HOMEBREW_FORBIDDEN_FORMULAE "node"
+set -gx HOMEBREW_FORBIDDEN_FORMULAE node
 
 ###-begin-pnpm-completion-###
 function _pnpm_completion
-  set cmd (commandline -o)
-  set cursor (commandline -C)
-  set words (count $cmd)
+    set cmd (commandline -o)
+    set cursor (commandline -C)
+    set words (count $cmd)
 
-  set completions (eval env DEBUG=\"" \"" COMP_CWORD=\""$words\"" COMP_LINE=\""$cmd \"" COMP_POINT=\""$cursor\"" SHELL=fish pnpm completion-server -- $cmd)
+    set completions (eval env DEBUG=\"" \"" COMP_CWORD=\""$words\"" COMP_LINE=\""$cmd \"" COMP_POINT=\""$cursor\"" SHELL=fish pnpm completion-server -- $cmd)
 
-  if [ "$completions" = "__tabtab_complete_files__" ]
-    set -l matches (commandline -ct)*
-    if [ -n "$matches" ]
-      __fish_complete_path (commandline -ct)
+    if [ "$completions" = __tabtab_complete_files__ ]
+        set -l matches (commandline -ct)*
+        if [ -n "$matches" ]
+            __fish_complete_path (commandline -ct)
+        end
+    else
+        for completion in $completions
+            echo -e $completion
+        end
     end
-  else
-    for completion in $completions
-      echo -e $completion
-    end
-  end
 end
 
-complete -f -d 'pnpm' -c pnpm -a "(_pnpm_completion)"
+complete -f -d pnpm -c pnpm -a "(_pnpm_completion)"
 ###-end-pnpm-completion-###
-
-# opam configuration
-source /Users/object1037/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 # fzf configuration
 set -gx RUNEWIDTH_EASTASIAN 0
 set -gx FZF_CTRL_T_OPTS "
     --preview 'bat -n --color=always --style=numbers --line-range=:500 {}'
-    --bind 'ctrl-/:change-preview-window(down|hidden|)'" 
+    --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 set -gx FZF_CTRL_R_OPTS "
     --preview 'echo {}' --preview-window up:3:hidden:wrap
     --bind 'ctrl-/:toggle-preview'
@@ -114,8 +111,8 @@ set --export --prepend PATH "/Users/object1037/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # pnpm
-set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
+set -gx PNPM_HOME /Users/object1037/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
