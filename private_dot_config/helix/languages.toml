@@ -51,6 +51,7 @@ config = { typescript = { tsdk = "~/Library/pnpm/global/5/node_modules/typescrip
 name = "astro"
 auto-format = true
 language-servers = [ "astro-ls" ]
+formatter = { command = "prettier", args = ["--parser", "astro"] }
 
 # C/C++
 [[language]]
