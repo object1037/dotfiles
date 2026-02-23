@@ -53,6 +53,14 @@ auto-format = true
 language-servers = [ "astro-ls" ]
 formatter = { command = "prettier", args = ["--parser", "astro"] }
 
+# Rust
+[[language]]
+name = "rust"
+auto-format = true
+
+[language-server.rust-analyzer.config.cargo]
+feature = "all"
+
 # C/C++
 [[language]]
 name = "c"
