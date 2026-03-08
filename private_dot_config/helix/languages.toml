@@ -45,7 +45,7 @@ language-servers = [ { name = "vscode-css-language-server", except-features = [ 
 [language-server.astro-ls]
 command = "astro-ls"
 args = ["--stdio"]
-config = { typescript = { tsdk = "~/Library/pnpm/global/5/node_modules/typescript/lib" }, environment = "node" }
+config = { typescript = { tsdk = "/Users/object1037/Library/pnpm/global/5/node_modules/typescript/lib/" }, environment = "node" }
 
 [[language]]
 name = "astro"
