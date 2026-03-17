@@ -9,7 +9,8 @@ abbr pn pnpm
 
 abbr gs git status
 abbr ga git add
-abbr gc git commit
+abbr gc --set-cursor "git commit -m '%'"
+abbr gca git commit --amend
 abbr gpush git push origin
 abbr gpull git pull origin
 abbr glog git log --oneline
