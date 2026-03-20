@@ -11,6 +11,8 @@ abbr gs git status
 abbr ga git add
 abbr gc --set-cursor "git commit -m '%'"
 abbr gca git commit --amend
+abbr --command git fx "commit --fixup"
+abbr --command git sq --set-cursor "rebase -i --autosquash HEAD~%"
 abbr gpush git push origin
 abbr gpull git pull origin
 abbr glog git log --oneline
