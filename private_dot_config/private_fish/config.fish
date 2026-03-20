@@ -7,15 +7,16 @@ abbr -a lst ls -T --icons
 
 abbr pn pnpm
 
-abbr gs git status
-abbr ga git add
-abbr gc --set-cursor "git commit -m '%'"
-abbr gca git commit --amend
-abbr --command git fx "commit --fixup"
-abbr --command git sq --set-cursor "rebase -i --autosquash HEAD~%"
-abbr gpush git push origin
-abbr gpull git pull origin
-abbr glog git log --oneline
+abbr -a gs git status
+abbr -a ga git add
+abbr -a gc --set-cursor "git commit -m '%'"
+abbr -a gca git commit --amend
+abbr -a --command git fx "commit --fixup"
+abbr -a --command git sq --set-cursor "rebase -i --autosquash HEAD~%"
+abbr -a gpush git push origin
+abbr -a --command git -- -f "--force-with-lease --force-if-includes"
+abbr -a gpull git pull origin
+abbr -a glog git log --oneline
 
 alias gl 'git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(black magenta)%d%Creset %s"'
 
