@@ -42,6 +42,7 @@ set fish_greeting "Happy Hacking!"
 set -gx EDITOR hx
 
 # PATH
+fish_add_path $HOME/.vite-plus/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path $HOME/bin
@@ -66,7 +67,7 @@ zoxide init fish | source
 
 pyenv init - | source
 
-set -U nvm_default_version latest
+source "$HOME/.vite-plus/env.fish"
 
 set -gx HOMEBREW_FORBIDDEN_FORMULAE node
 
