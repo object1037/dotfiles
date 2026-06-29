@@ -46,6 +46,7 @@ fish_add_path $HOME/.vite-plus/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 fish_add_path $HOME/bin
+fish_add_path $HOME/.local/bin
 #set -x PATH $HOME/.local/bin $PATH
 #set -x PATH $HOME/.nodebrew/current/bin $PATH
 #set -x PATH $HOME/.rbenv/shims $PATH
@@ -116,9 +117,9 @@ set --export --prepend PATH "/Users/object1037/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # pnpm
-set -gx PNPM_HOME /Users/object1037/Library/pnpm
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
+set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
 
