@@ -9,7 +9,7 @@ abbr pn pnpm
 
 abbr -a gs git status
 abbr -a ga git add
-abbr -a gc --set-cursor "git commit -m '%'"
+abbr -a gc --set-cursor "git commit -S -m '%'"
 abbr -a gca git commit --amend
 abbr -a --command git fx "commit --fixup"
 abbr -a --command git sq --set-cursor "rebase -i --autosquash HEAD~%"
@@ -66,7 +66,7 @@ starship init fish | source
 
 zoxide init fish | source
 
-pyenv init - | source
+fzf --fish | source
 
 source "$HOME/.vite-plus/env.fish"
 
@@ -117,9 +117,9 @@ set --export --prepend PATH "/Users/object1037/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # pnpm
-set -gx PNPM_HOME "/Users/object1037/Library/pnpm"
+set -gx PNPM_HOME /Users/object1037/Library/pnpm
 if not string match -q -- "$PNPM_HOME/bin" $PATH
-  set -gx PATH "$PNPM_HOME/bin" $PATH
+    set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
 

@@ -30,4 +30,3 @@
 	colorMoved = default
 [commit]
 	verbose = true
-	gpgsign = true
