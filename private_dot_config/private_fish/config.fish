@@ -32,7 +32,7 @@ set fish_color_redirection "#FCA5A5"
 set fish_color_end white
 set fish_color_error "#FF5252"
 set fish_color_param "#93C5FD"
-set fish_color_comment "#64748B"
+set fish_color_comment 64748B
 set fish_color_operator "#FCD34D"
 set fish_color_escape "#D8B4FE"
 set fish_color_autosuggestion "#94A3B8"
